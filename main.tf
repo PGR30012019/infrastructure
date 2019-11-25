@@ -1,14 +1,14 @@
 terraform {
     backend "s3" {
-        bucket = "pgr301bucket"
-        key    = "lagasild/terraform.tfstate"
-        region = "eu-north-1"
+        bucket = "pgr301bucket2"
+        key    = "lagasild-skb/terraform.tfstate"
+        region = "eu-west-1"
     }
 }
 
 module "heroku_module" {
     source = "./heroku_module"
-    name = "devops-exam"
+    name = "devops-examss"
     buildpacks = [
         "heroku/java"
     ]
